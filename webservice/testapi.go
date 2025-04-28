@@ -44,16 +44,6 @@ func main() {
 func userHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
-	// if r.Method == http.MethodGet {
-	// 	// GET request - ambil user pertama
-	// 	var user User
-	// 	result := db.First(&user)
-	// 	if result.Error != nil {
-	// 		http.Error(w, result.Error.Error(), http.StatusInternalServerError)
-	// 		return
-	// 	}
-	// 	json.NewEncoder(w).Encode(user)
-
 	// GET request - ambil semua user
 	if r.Method == http.MethodGet {
 		var users []User
